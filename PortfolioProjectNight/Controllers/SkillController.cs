@@ -16,5 +16,26 @@ namespace PortfolioProjectNight.Controllers
             var values = context.Skill.ToList();
             return View(values);
         }
+        [HttpGet]
+        public ActionResult CreateSkill()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CreateSkill(Skill skill)
+        {
+            context.Skill.Add(skill);
+            context.SaveChanges();
+            return RedirectToAction("SkillList");
+        }
+
+        public ActionResult DeleteSkill(int id)
+        {
+            var values = context.Skill.Find(id);
+            context.Skill.Remove(values);
+            context.SaveChanges();
+            return RedirectToAction("SkillList");
+        }
     }
 }
