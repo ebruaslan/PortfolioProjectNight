@@ -37,5 +37,12 @@ namespace PortfolioProjectNight.Controllers
             context.SaveChanges();
             return RedirectToAction("SkillList");
         }
+
+        [HttpGet]
+        public ActionResult UpdateSkill(int id)
+        {
+            var values = context.Skill.Find(id);
+            return View(values);
+        }
     }
 }
