@@ -523,6 +523,7 @@
     <Content Include="Views\Statistics\Index.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\PartialHead.cshtml" />
+    <Content Include="Views\Default\PartialScripts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
