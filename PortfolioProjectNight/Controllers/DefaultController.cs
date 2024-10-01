@@ -13,5 +13,15 @@ namespace PortfolioProjectNight.Controllers
         {
             return View();
         }
+
+        public PartialViewResult PartialHead()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult PartialScripts()
+        {
+            return PartialView();
+        }
     }
 }
